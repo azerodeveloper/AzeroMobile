@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/phoneLoginFragment">
+
+    <fragment
+        android:id="@+id/phoneLoginFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.PhoneLoginFragment"
+        android:label="PhoneLoginFragment"
+        tools:layout="@layout/fragment_phone_login" >
+        <action
+            android:id="@+id/action_phoneLoginFragment_to_verificationCodeFragment"
+            app:destination="@id/verificationCodeFragment" />
+        <action
+            android:id="@+id/action_phoneLoginFragment_to_selectLoginModeFragment"
+            app:destination="@id/selectLoginModeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectLoginModeFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.SelectLoginModeFragment"
+        android:label="SelectLoginModeFragment"
+        tools:layout="@layout/fragment_select_login_mode" >
+        <action
+            android:id="@+id/action_selectLoginModeFragment_to_pwdLoginFragment"
+            app:destination="@id/pwdLoginFragment" />
+
+        <deepLink app:uri="www.soundai.com.SelectLoginModeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/verificationCodeFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.VerificationCodeFragment"
+        tools:layout="@layout/fragment_verification_code"
+        android:label="VerificationCodeFragment" >
+        <action
+            android:id="@+id/action_verificationCodeFragment_to_pwdLoginFragment"
+            app:destination="@id/pwdLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pwdLoginFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.PwdLoginFragment"
+        tools:layout="@layout/fragment_pwd_login"
+        android:label="PwdLoginFragment" >
+        <action
+            android:id="@+id/action_pwdLoginFragment_to_pwdForgetFragment"
+            app:destination="@id/pwdForgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pwdForgetFragment"
+        tools:layout="@layout/fragment_pwd_forget"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.PwdForgetFragment"
+        android:label="PwdForgetFragment" >
+        <action
+            android:id="@+id/action_pwdForgetFragment_to_selectVerficationModeFragment"
+            app:destination="@id/selectVerficationModeFragment" />
+        <action
+            android:id="@+id/action_pwdForgetFragment_to_verificationCodeFragment"
+            app:destination="@id/verificationCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectVerficationModeFragment"
+        tools:layout="@layout/fragment_select_verification_mode"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.SelectVerficationModeFragment"
+        android:label="SelectVerficationModeFragment" >
+        <action
+            android:id="@+id/action_selectVerficationModeFragment_to_placeholder"
+            app:destination="@id/placeholder" />
+        <action
+            android:id="@+id/action_selectVerficationModeFragment_to_questionVerificationFragment"
+            app:destination="@id/questionVerificationFragment" />
+        <action
+            android:id="@+id/action_selectVerficationModeFragment_to_userInfoVerificationFragment"
+            app:destination="@id/userInfoVerificationFragment" />
+    </fragment>
+    <fragment android:id="@+id/placeholder" >
+        <action
+            android:id="@+id/action_placeholder_to_pwdResetFragment"
+            app:destination="@id/pwdResetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionVerificationFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.QuestionVerificationFragment"
+        tools:layout="@layout/fragment_question_verification"
+        android:label="QuestionVerificationFragment" >
+        <action
+            android:id="@+id/action_questionVerificationFragment_to_pwdResetFragment"
+            app:destination="@id/pwdResetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoVerificationFragment"
+        tools:layout="@layout/fragment_question_verification"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.UserInfoVerificationFragment"
+        android:label="UserInfoVerificationFragment" >
+        <action
+            android:id="@+id/action_userInfoVerificationFragment_to_pwdResetFragment"
+            app:destination="@id/pwdResetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pwdResetFragment"
+        tools:layout="@layout/fragment_pwd_reset"
+        android:name="com.soundai.azero.azeromobile.ui.activity.login.PwdResetFragment"
+        android:label="PwdResetFragment" />
+</navigation>

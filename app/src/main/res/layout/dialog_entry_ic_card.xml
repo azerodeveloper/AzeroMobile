@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="290dp"
+    android:layout_height="400dp"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical">
+
+    <com.soundai.azero.azeromobile.ui.widget.CircleImageView
+        android:id="@+id/niv_skill_logo"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/skill_logo"
+        app:border_width="2dp" />
+
+    <TextView
+        android:id="@+id/tv_skill_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="天气"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_say_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="您可以这样对我说"
+        android:textColor="#0EAD6E"
+        android:textSize="20dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="37dp"
+        android:overScrollMode="never">
+
+        <TextView
+            android:id="@+id/tv_skill_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:lineSpacingExtra="13dp"
+            android:text="今天天气怎么样"
+            android:textAlignment="center"
+            android:textColor="#999999"
+            android:textSize="14dp" />
+
+    </ScrollView>
+
+</LinearLayout>

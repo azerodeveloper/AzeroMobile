@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_bottom_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_bottom_content"
+    android:paddingStart="@dimen/padding_content_horizontal"
+    android:paddingTop="@dimen/padding_content_vertical"
+    android:paddingEnd="@dimen/padding_content_horizontal">
+
+    <TextView
+        android:id="@+id/tv_title_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_pwd"
+        android:textColor="@color/textPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="@dimen/content_title_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        android:src="@drawable/dl_icon_password"
+        app:layout_constraintBottom_toBottomOf="@+id/et_phone_num"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_phone"
+        app:layout_constraintTop_toTopOf="@+id/et_phone_num" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="14dp"
+        android:layout_height="10dp"
+        android:src="@drawable/dl_btn_display"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/et_phone_num"
+        app:layout_constraintTop_toTopOf="@+id/et_phone_num"
+        tools:layout_editor_absoluteX="379dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/dl_btn_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/et_phone_num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_phone_num" />
+
+    <EditText
+        android:id="@+id/et_phone_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_phone"
+        app:met_iconLeft="@drawable/dl_icon_phone"
+        app:met_iconPadding="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        android:src="@drawable/dl_icon_password"
+        app:layout_constraintBottom_toBottomOf="@+id/et_pwd_2"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_phone"
+        app:layout_constraintTop_toTopOf="@+id/et_pwd_2" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="14dp"
+        android:layout_height="10dp"
+        android:src="@drawable/dl_btn_display"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/et_pwd_2"
+        app:layout_constraintTop_toTopOf="@+id/et_pwd_2"
+        tools:layout_editor_absoluteX="379dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/dl_btn_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/et_pwd_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_pwd_2" />
+
+    <EditText
+        android:id="@+id/et_pwd_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50dp"
+        android:background="@null"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_num"
+        app:met_iconLeft="@drawable/dl_icon_phone"
+        app:met_iconPadding="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/pwd_hint"
+        android:textColor="@color/textHint"
+        android:textSize="@dimen/pwd_hint"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/selector_action_button"
+        android:text="@string/next_step"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

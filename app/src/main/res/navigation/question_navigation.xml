@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_navigation"
+    app:startDestination="@id/questionProcessingFragment">
+
+    <fragment
+        android:id="@+id/questionProcessingFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.question.fragment.QuestionProcessingFragment"
+        android:label="QuestionAnswerLinkFragment"
+        tools:layout="@layout/fragment_question_processing">
+        <action
+            android:id="@+id/action_questionProcessingFragment_to_questionFailedFragment"
+            app:destination="@id/questionFailedFragment" />
+        <action
+            android:id="@+id/action_questionProcessingFragment_to_questionWinFragment"
+            app:destination="@id/questionWinFragment" />
+        <action
+            android:id="@+id/action_questionProcessingFragment_to_questionHelperFragment"
+            app:destination="@id/questionHelperFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionWinFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.question.fragment.QuestionWinFragment"
+        android:label="QuestionWinFragment"
+        tools:layout="@layout/fragment_question_win">
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionFailedFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.question.fragment.QuestionFailedFragment"
+        android:label="QuestionFailedFragment"
+        tools:layout="@layout/fragment_question_failed">
+        <action
+            android:id="@+id/action_questionFailedFragment_to_questionProcessingFragment"
+            app:destination="@id/questionProcessingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionHelperFragment"
+        android:name="com.soundai.azero.azeromobile.ui.activity.question.fragment.QuestionHelperFragment"
+        android:label="QuestionHelperFragment"
+        tools:layout="@layout/activity_question_help">
+        <action
+            android:id="@+id/action_questionHelperFragment_to_questionProcessingFragment"
+            app:destination="@+id/questionProcessingFragment"/>
+    </fragment>
+
+</navigation>

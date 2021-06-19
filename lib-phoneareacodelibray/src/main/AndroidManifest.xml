@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yiang.phoneareacode" >
+
+    <application>
+        <activity android:name=".PhoneAreaCodeActivity"
+            android:theme="@style/AppTheme"
+            />
+    </application>
+</manifest>

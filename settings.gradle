@@ -1,0 +1,2 @@
+include ':app', ':lib-todaystepcounter', ':lib-todayrunrecord', ':lib-surrogate', ':lib-phoneareacodelibray'
+rootProject.name='AzeroMobile'

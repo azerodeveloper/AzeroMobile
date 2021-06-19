@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/asr_guideline_layout_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.386" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/dialog_background_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/asr_guideline_layout_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.065" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_horizontal3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.169" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_horizontal5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.274" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_horizontal6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.452" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_horizontal7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.527" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_horizontal8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.754" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_horizontal9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.874" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_vertical"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_vertical2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.218" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_vertical3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.102" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_vertical4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.941" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_vertical5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.781" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/asr_guideline_vertical6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.977" />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_asr_content_help_background"
+                android:gravity="center"
+                android:text="@string/dialog_box_help"
+                android:textColor="@color/colorTitleH1"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/asr_guideline_horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/asr_guideline_horizontal3"
+                app:layout_constraintStart_toEndOf="@+id/asr_guideline_vertical"
+                app:layout_constraintEnd_toStartOf="@+id/asr_guideline_vertical3" />
+
+        <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="TODO"
+                android:foregroundGravity="center"
+                android:src="@drawable/sb_icon_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/asr_guideline_vertical4"
+                app:layout_constraintEnd_toStartOf="@+id/asr_guideline_vertical6"
+                app:layout_constraintTop_toBottomOf="@+id/asr_guideline_horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/asr_guideline_horizontal3"/>
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_box_title"
+                android:textColor="@color/asr_content_title_color"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/asr_guideline_horizontal5"
+                app:layout_constraintTop_toBottomOf="@+id/asr_guideline_horizontal3" />
+
+        <TextView
+                android:id="@+id/tv_asr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/asr_guideline_horizontal7"
+                app:layout_constraintTop_toBottomOf="@+id/asr_guideline_horizontal6"
+                tools:text="我想听周杰伦的歌" />
+
+        <com.soundai.azero.azeromobile.ui.widget.AudioWaveView
+                android:id="@+id/audioWaveView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/asr_guideline_horizontal9"
+                app:layout_constraintTop_toBottomOf="@+id/asr_guideline_horizontal8"
+                app:layout_constraintStart_toEndOf="@+id/asr_guideline_vertical2"
+                app:layout_constraintEnd_toStartOf="@+id/asr_guideline_vertical5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

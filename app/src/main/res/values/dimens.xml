@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_title_margin_start">20dp</dimen>
+    <dimen name="weather_text_size">12sp</dimen>
+
+    <!--页面边距-->
+    <dimen name="page_margin">15dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="content_title_size">17sp</dimen>
+    <dimen name="padding_content_horizontal">32dp</dimen>
+    <dimen name="padding_content_vertical">30dp</dimen>
+    <dimen name="content_subtitle_size">12sp</dimen>
+
+    <dimen name="default_ev_border_width">1dp</dimen>
+    <dimen name="default_ev_border_radius">3dp</dimen>
+    <dimen name="default_ev_password_width">10dp</dimen>
+    <dimen name="default_ev_password_radius">3dp</dimen>
+    <dimen name="default_input_text_view_size">50dp</dimen>
+    <dimen name="default_input_text_view_padding">37dp</dimen>
+    <dimen name="default_input_text_size">22sp</dimen>
+    <integer name="default_ev_password_length">4</integer>
+    <dimen name="custom_ev_border_width">10dp</dimen>
+    <dimen name="custom_ev_border_radius">10dp</dimen>
+    <dimen name="custom_ev_password_width">10dp</dimen>
+    <dimen name="captcha_cursor_height">30dp</dimen>
+    <dimen name="captcha_cursor_width">1dp</dimen>
+    <dimen name="login_btn_width">310dp</dimen>
+    <dimen name="login_btn_height">45dp</dimen>
+    <dimen name="question_button_width">60dp</dimen>
+    <dimen name="question_button_height">26dp</dimen>
+    <dimen name="question_button_textsize">14sp</dimen>
+    <dimen name="question_title_size">16sp</dimen>
+    <dimen name="question_margin_start">14dp</dimen>
+    <dimen name="question_margin_top">10dp</dimen>
+    <dimen name="answer_text_size">14sp</dimen>
+    <dimen name="question_layout_height">90dp</dimen>
+    <dimen name="pwd_hint">12sp</dimen>
+    <dimen name="tv_serial_width">33dp</dimen>
+    <dimen name="tv_serial_height">20dp</dimen>
+    <dimen name="tv_serial_size">12sp</dimen>
+    <dimen name="grid_content_width">345dp</dimen>
+
+    <dimen name="encyclopedia_main_title_size">20sp</dimen>
+    <dimen name="encyclopedia_image_radius">6dp</dimen>
+    <dimen name="encyclopedia_title_text">17sp</dimen>
+
+    <dimen name="asr_content_wave_view_paint">2dp</dimen>
+
+    <dimen name="network_dialog_card_width">290dp</dimen>
+    <dimen name="network_dialog_card_height">80dp</dimen>
+    <dimen name="network_dialog_card_corner_radius">7.5dp</dimen>
+    <dimen name="network_dialog_card_elevation">7dp</dimen>
+    <dimen name="network_dialog_card_text_size">16sp</dimen>
+    <dimen name="network_dialog_card_text_right_padding">8dp</dimen>
+    <dimen name="network_dialog_card_icon_width">19dp</dimen>
+    <dimen name="network_dialog_card_icon_height">19dp</dimen>
+
+    <dimen name="network_snack_bar_height">45dp</dimen>
+
+    <dimen name="network_snack_bar_icon_width">38dp</dimen>
+    <dimen name="network_snack_bar_icon_height">38dp</dimen>
+    <dimen name="network_snack_bar_icon_start">15dp</dimen>
+    <dimen name="network_snack_bar_icon_top">10.5dp</dimen>
+    <dimen name="network_snack_bar_icon_bottom">10dp</dimen>
+
+    <dimen name="network_snack_bar_text_height">16.5dp</dimen>
+    <dimen name="network_snack_bar_text_start">13.5dp</dimen>
+    <dimen name="network_snack_bar_text_end">31.5dp</dimen>
+    <dimen name="network_snack_bar_text_top">14.5dp</dimen>
+    <dimen name="network_snack_bar_text_bottom">13.5dp</dimen>
+    <dimen name="network_snack_bar_text_size">16sp</dimen>
+
+    <dimen name="wheel_item_width">160dp</dimen>
+    <dimen name="wheel_item_height">40dp</dimen>
+    <dimen name="wheel_divider_height">1dp</dimen>
+    <dimen name="wheel_text_size">20sp</dimen>
+</resources>

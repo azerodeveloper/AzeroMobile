@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_weather_item">
+
+    <View
+        android:id="@+id/weather_item_divider_line_0"
+        android:layout_width="75dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/page_margin"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="@dimen/page_margin"
+        android:background="@drawable/shape_weather_dotted_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/weather_item_divider_line_1"
+        android:layout_width="75dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/page_margin"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="@dimen/page_margin"
+        android:background="@drawable/shape_weather_dotted_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_item_divider_line_0" />
+
+    <View
+        android:id="@+id/weather_item_divider_line_2"
+        android:layout_width="75dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/page_margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/page_margin"
+        android:background="@drawable/shape_weather_dotted_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_item_divider_line_1" />
+
+
+    <View
+        android:id="@+id/weather_item_divider_line_3"
+        android:layout_width="75dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/page_margin"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="@dimen/page_margin"
+        android:background="@drawable/shape_weather_dotted_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_item_divider_line_2" />
+
+
+    <TextView
+        android:id="@+id/tv_weather_item_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_weather_item_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="周三" />
+
+    <TextView
+        android:id="@+id/tv_weather_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/weather_item_divider_line_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_weather_item_week"
+        tools:text="02月21日" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_weather_item_day_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_weather_item_weather"
+        app:layout_constraintEnd_toStartOf="@id/iv_weather_item_night_icon"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_item_divider_line_0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/tq_icon_rain" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_weather_item_night_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_weather_item_day_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_weather_item_day_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_weather_item_day_icon"
+        tools:src="@drawable/tq_icon_cloudy" />
+
+    <TextView
+        android:id="@+id/tv_weather_item_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/weather_item_divider_line_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_weather_item_day_icon"
+        tools:text="小雨转多云" />
+
+    <TextView
+        android:id="@+id/tv_weather_item_temperature_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/weather_item_divider_line_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_item_divider_line_1"
+        tools:text="2~11°" />
+
+    <TextView
+        android:id="@+id/tv_weather_item_wind_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_weather_item_wind_scale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_item_divider_line_2"
+        tools:text="西风" />
+
+    <TextView
+        android:id="@+id/tv_weather_item_wind_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/weather_item_divider_line_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_weather_item_wind_direction"
+        tools:text="2~3级" />
+
+    <com.soundai.azero.azeromobile.ui.widget.weather.AirQualityTextView
+        android:id="@+id/tv_weather_item_air"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:paddingStart="9dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="9dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_item_divider_line_3"
+        tools:text="中度" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

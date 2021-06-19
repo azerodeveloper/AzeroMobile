@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffececec"
+    tools:context=".ui.activity.personal.PersonalInfoActivity">
+    <com.soundai.azero.azeromobile.ui.widget.MockStatusBarView
+        android:id="@+id/mock_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="个人资料"
+        android:textColor="@color/textTitle"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEECEC" />
+    
+    <RelativeLayout
+        android:id="@+id/rl_avatar"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21.5dp"
+            android:textSize="17sp"
+            android:textColor="#333333"
+            android:text="头像"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/grzx_icon_next" />
+
+        <TextView
+            android:id="@+id/tv_avatar"
+            android:layout_marginRight="9.5dp"
+            android:layout_toLeftOf="@id/iv1"
+            android:layout_centerVertical="true"
+            android:text="添加"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.soundai.azero.azeromobile.ui.widget.CircleImageView
+            android:id="@+id/civ_avatar"
+            android:visibility="visible"
+            android:layout_toLeftOf="@id/iv1"
+            android:layout_marginRight="9.5dp"
+            android:layout_width="32dp"
+            android:layout_centerVertical="true"
+            android:layout_height="32dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21.5dp"
+            android:textSize="17sp"
+            android:textColor="#333333"
+            android:text="昵称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/grzx_icon_next" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_marginRight="9.5dp"
+            android:layout_toLeftOf="@id/iv2"
+            android:layout_centerVertical="true"
+            android:text="添加"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_gender"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21.5dp"
+            android:textSize="17sp"
+            android:textColor="#333333"
+            android:text="性别"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/grzx_icon_next" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_marginRight="9.5dp"
+            android:layout_toLeftOf="@id/iv3"
+            android:layout_centerVertical="true"
+            android:text="选择"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_birthday"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21.5dp"
+            android:textSize="17sp"
+            android:textColor="#333333"
+            android:text="生日"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/grzx_icon_next" />
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            android:layout_marginRight="9.5dp"
+            android:layout_toLeftOf="@id/iv4"
+            android:layout_centerVertical="true"
+            android:text="选择"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_email"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21.5dp"
+            android:textSize="17sp"
+            android:textColor="#333333"
+            android:text="邮箱"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv5"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/grzx_icon_next" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_marginRight="9.5dp"
+            android:layout_toLeftOf="@id/iv5"
+            android:layout_centerVertical="true"
+            android:text="添加"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</LinearLayout>

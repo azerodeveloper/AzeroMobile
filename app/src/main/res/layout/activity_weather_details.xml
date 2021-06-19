@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_weather_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tq_bg_sunny">
+
+    <com.soundai.azero.azeromobile.ui.widget.MockStatusBarView
+        android:id="@+id/mock_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_weather_multi_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_city" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_weather_normal_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_city">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bg_solar_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tq_bg_play_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_solar_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/tq_icon_play_white"
+            android:drawablePadding="3dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_solar_terms"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bg_solar_terms"
+            tools:text="今日霜降，一朝秋暮目露成霜" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gp_solar_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="bg_solar_terms,tv_solar_terms" />
+
+        <View
+            android:id="@+id/weather_label"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="@dimen/page_margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/page_margin"
+            android:background="@drawable/shape_weather_label_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bg_solar_terms" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="74sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_weather_bottom"
+            app:layout_constraintLeft_toLeftOf="@id/weather_label"
+            app:layout_constraintTop_toTopOf="@id/weather_label"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="15°" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_temperature"
+            app:layout_constraintEnd_toEndOf="@id/tv_temperature"
+            app:layout_constraintStart_toEndOf="@id/tv_temperature"
+            tools:text="晴" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_weather_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/feedback_bg"
+            app:layout_constraintStart_toStartOf="@id/tv_temperature"
+            app:layout_constraintTop_toBottomOf="@id/tv_temperature"
+            tools:text="晴转多云" />
+
+
+        <FrameLayout
+            android:id="@+id/feedback_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_weather_feedback_bg"
+            app:layout_constraintBottom_toBottomOf="@id/weather_label"
+            app:layout_constraintStart_toStartOf="@id/tv_temperature"
+            app:layout_constraintTop_toBottomOf="@id/tv_weather_bottom">
+
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:drawableStart="@drawable/tq_icon_feedback"
+                android:drawablePadding="1dp"
+                android:gravity="center"
+                android:text="@string/weather_feedback"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_lunar_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="17dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/weather_label"
+            app:layout_constraintTop_toTopOf="@id/weather_label"
+            tools:text="腊月二十六" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="17dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/weather_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_lunar_date"
+            tools:text="01月12日 星期二" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/weather_extra_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/page_margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/page_margin"
+            android:background="@drawable/shape_weather_label_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weather_label">
+
+            <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+                android:id="@+id/tv_temperature_range_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                android:text="@string/weather_temperature_range"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+                android:id="@+id/tv_temperature_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_temperature_range_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_temperature_range_title"
+                tools:text="2°~11°" />
+
+            <View
+                android:id="@+id/dotted_line_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/shape_weather_dotted_line"
+                app:layout_constraintEnd_toEndOf="@id/tv_temperature_range"
+                app:layout_constraintStart_toStartOf="@id/tv_temperature_range_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_temperature_range_title" />
+
+            <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+                android:id="@+id/tv_humidity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                android:text="@string/weather_humidity"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_line_1" />
+
+            <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+                android:id="@+id/tv_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_humidity_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_humidity_title"
+                tools:text="70%" />
+
+            <View
+                android:id="@+id/dotted_line_2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/shape_weather_dotted_line"
+                app:layout_constraintEnd_toEndOf="@id/tv_humidity"
+                app:layout_constraintStart_toStartOf="@id/tv_humidity_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_humidity_title" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/gp_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tv_humidity,tv_humidity_title,dotted_line_2" />
+
+            <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+                android:id="@+id/tv_wind_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="11dp"
+                android:text="@string/weather_wind"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_line_2" />
+
+            <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+                android:id="@+id/tv_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="@string/weather_wind"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_wind_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_wind_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/multi_weather_label"
+            android:layout_width="0dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="@dimen/page_margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/page_margin"
+            android:background="@drawable/shape_weather_label_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weather_extra_label" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_today_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/weather_today"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/multi_weather_label"
+            app:layout_constraintTop_toTopOf="@id/multi_weather_label" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_today_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginEnd="25dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_title"
+            app:layout_constraintEnd_toStartOf="@id/multi_divider_line"
+            app:layout_constraintTop_toTopOf="@id/tv_today_title"
+            tools:text="阴转多云" />
+
+        <com.soundai.azero.azeromobile.ui.widget.weather.AirQualityTextView
+            android:id="@+id/tv_today_air"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="9dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_temperature"
+            app:layout_constraintEnd_toEndOf="@id/tv_today_weather"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_weather"
+            app:layout_constraintTop_toTopOf="@id/tv_today_temperature"
+            tools:text="优" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_today_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_today_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_title"
+            tools:text="11/2°" />
+
+        <View
+            android:id="@+id/multi_divider_line"
+            android:layout_width="1px"
+            android:layout_height="0dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="@color/weather_multi_divider_line"
+            app:layout_constraintBottom_toBottomOf="@id/multi_weather_label"
+            app:layout_constraintEnd_toEndOf="@id/multi_weather_label"
+            app:layout_constraintStart_toStartOf="@id/multi_weather_label"
+            app:layout_constraintTop_toTopOf="@id/multi_weather_label" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_tomorrow_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/weather_tomorrow"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/multi_divider_line"
+            app:layout_constraintTop_toTopOf="@id/multi_weather_label" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_tomorrow_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tomorrow_title"
+            app:layout_constraintEnd_toEndOf="@id/multi_weather_label"
+            app:layout_constraintTop_toTopOf="@id/tv_tomorrow_title"
+            tools:text="晴转小雨" />
+
+        <com.soundai.azero.azeromobile.ui.widget.weather.AirQualityTextView
+            android:id="@+id/tv_tomorrow_air"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="9dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tomorrow_temperature"
+            app:layout_constraintEnd_toEndOf="@id/tv_tomorrow_weather"
+            app:layout_constraintTop_toBottomOf="@id/tv_tomorrow_weather"
+            app:layout_constraintTop_toTopOf="@id/tv_tomorrow_temperature"
+            tools:text="轻度" />
+
+        <com.soundai.azero.azeromobile.ui.widget.NoPaddingTextView
+            android:id="@+id/tv_tomorrow_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_tomorrow_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_tomorrow_title"
+            tools:text="11/2°" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/tq_bg_top_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/page_margin"
+        android:src="@drawable/tq_icon_add"
+        app:layout_constraintBottom_toBottomOf="@id/tv_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_location" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/ic_add"
+        app:layout_constraintTop_toBottomOf="@id/mock_status_bar"
+        tools:text="成华区 建设路" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_location"
+        app:layout_constraintTop_toBottomOf="@id/tv_location"
+        tools:text="成都市" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:src="@drawable/tq_icon_location"
+        app:layout_constraintBottom_toBottomOf="@id/tv_location"
+        app:layout_constraintStart_toEndOf="@id/tv_location"
+        app:layout_constraintTop_toTopOf="@id/tv_location" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="@dimen/page_margin"
+        android:src="@drawable/tq_icon_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mock_status_bar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="150dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="31dp"
+        android:src="@drawable/tq_img_bear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

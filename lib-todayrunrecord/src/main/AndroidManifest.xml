@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.soundai.azero.lib_todayrunrecord" >
+<!--    android:process=":todayRunService"-->
+
+    <application>
+        <service
+            android:name=".TodayRunService"
+            android:enabled="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:priority="1000">
+        </service>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9470f5ac9ba9f72f9d08c5f5c1878772" />
+        <service android:name="com.amap.api.location.APSService" />
+    </application>
+</manifest>

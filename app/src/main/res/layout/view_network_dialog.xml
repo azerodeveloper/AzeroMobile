@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/network_dialog_card_width"
+        android:layout_height="@dimen/network_dialog_card_height"
+        app:cardBackgroundColor="@color/network_card_background"
+        app:cardCornerRadius="@dimen/network_dialog_card_corner_radius"
+        app:cardElevation="@dimen/network_dialog_card_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/network_dialog_card_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/network_dialog_card_text_right_padding"
+                android:textColor="@color/network_card_text_color"
+                android:textSize="@dimen/network_dialog_card_text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/network_dialog_card_image"
+                android:layout_width="@dimen/network_dialog_card_icon_width"
+                android:layout_height="@dimen/network_dialog_card_icon_height"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

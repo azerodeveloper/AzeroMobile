@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_bottom_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_bottom_content"
+    android:paddingStart="@dimen/padding_content_horizontal"
+    android:paddingTop="@dimen/padding_content_vertical"
+    android:paddingEnd="@dimen/padding_content_horizontal">
+
+    <TextView
+        android:id="@+id/tv_title_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_pwd"
+        android:textColor="@color/textPrimaryDark"
+        android:textSize="@dimen/content_title_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_phone_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="+86 123456789"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_phone"
+        app:met_iconLeft="@drawable/dl_icon_phone"
+        app:met_iconPadding="0dp"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="其他验证方式"
+        android:textColor="@color/textHint"
+        app:layout_constraintStart_toStartOf="@+id/et_phone_num"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_num" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/selector_action_button"
+        android:text="@string/next_step"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_num" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

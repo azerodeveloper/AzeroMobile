@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/network_snack_bar_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/network_snack_bar_height"
+    android:layout_gravity="top"
+    android:background="@color/network_snack_bar_color">
+
+    <ImageView
+        android:id="@+id/network_snack_bar_image"
+        android:layout_width="@dimen/network_snack_bar_icon_width"
+        android:layout_height="@dimen/network_snack_bar_icon_height"
+        android:layout_marginStart="@dimen/network_snack_bar_icon_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/network_snack_bar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/network_snack_bar_text_start"
+        android:textColor="@color/network_snack_bar_text_color"
+        android:textSize="@dimen/network_snack_bar_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/network_snack_bar_image"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

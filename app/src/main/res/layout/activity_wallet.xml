@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEECEC"
+    tools:context=".ui.activity.wallet.WalletActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <com.soundai.azero.azeromobile.ui.widget.MockStatusBarView
+            android:id="@+id/mock_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="我的钱包"
+            android:textColor="@color/textTitle"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mock_status_bar" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEECEC"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_money"
+            android:layout_width="match_parent"
+            android:layout_height="163.5dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="6.5dp"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/qb_img_background"
+            app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="25.5dp"
+                android:text="总金额"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="13dp"
+                android:gravity="left|top"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_amount"
+                tools:text="800.08" />
+
+            <TextView
+                android:id="@+id/tv_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="(￥)"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_money"
+                app:layout_constraintLeft_toRightOf="@id/tv_money" />
+
+            <Button
+                android:id="@+id/btn_withdrawal"
+                android:layout_width="60.5dp"
+                android:layout_height="27dp"
+                android:layout_marginRight="34dp"
+                android:background="@drawable/selector_wallet_money_bg"
+                android:text="提现"
+                android:textColor="#FEFEFE"
+                android:textSize="15sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_money"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_input"
+            app:layout_constraintTop_toBottomOf="@id/cl_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_money_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:text="金额（元）"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_money_unit_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:includeFontPadding="false"
+                android:text="￥"
+                android:textColor="#333333"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_money_unit" />
+
+            <EditText
+                android:lines="1"
+                android:inputType="numberDecimal"
+                android:id="@+id/et_money"
+                android:minWidth="80dp"
+                android:maxWidth="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:textColor="#333333"
+                android:textSize="30sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_money_unit_code"
+                app:layout_constraintLeft_toRightOf="@id/tv_money_unit_code" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_overflow_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="超出可提现金额"
+                android:textColor="#FB4242"
+                android:textSize="13sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_money_unit_code"
+                app:layout_constraintLeft_toRightOf="@id/et_money" />
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="8dp"
+                android:text="全部"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_money_unit_code"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <View
+            android:layout_marginTop="10dp"
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEECEC"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_input" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_wexin_pay"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_wx"
+                android:layout_marginLeft="30.5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/qb_icon_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_wx"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信支付"
+                app:layout_constraintLeft_toRightOf="@id/iv_wx"
+                />
+
+            <CheckBox
+                android:checked="true"
+                android:enabled="false"
+                android:id="@+id/cb_wexin_pay"
+                android:layout_marginRight="28.5dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_pay_checkbox"
+                android:button="@null"
+                android:layout_alignParentRight="true"
+                android:layout_width="15dp"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ali_pay"
+            app:layout_constraintTop_toBottomOf="@id/rl_wexin_pay"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_ali"
+                android:layout_marginLeft="30.5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/qb_icon_zhifubao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_ali"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝支付"
+                />
+
+            <CheckBox
+                android:enabled="false"
+                android:id="@+id/cb_ali_pay"
+                android:layout_marginRight="28.5dp"
+                android:background="@drawable/selector_pay_checkbox"
+                android:button="@null"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="15dp"
+                android:layout_height="15dp"/>
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

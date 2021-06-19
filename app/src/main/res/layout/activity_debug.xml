@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffececec"
+    tools:context=".ui.activity.personal.PersonalInfoActivity">
+    <com.soundai.azero.azeromobile.ui.widget.MockStatusBarView
+        android:id="@+id/mock_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="帮助我们"
+        android:textColor="@color/textTitle"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEECEC" />
+    
+    <RelativeLayout
+        android:id="@+id/rl_avatar"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21.5dp"
+            android:text="日志上传"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <Switch
+            android:id="@+id/switch_save_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="21.5dp"
+            android:textOff="关闭"
+            android:textOn="开启" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rl_avatar_2"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21.5dp"
+            android:text="录制音频"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <Switch
+            android:id="@+id/switch_save_pcm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="21.5dp"
+            android:textOff="关闭"
+            android:textOn="开启" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_tips_savepcm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21.5dp"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginBottom="15dp"
+        android:text="开启的音频保存在/sdcard/mono.pcm"
+        android:visibility="gone"
+        android:textColor="#80333333"
+        android:background="#ffffff"
+        android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="21.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="21.5dp"
+        android:text="因保护用户隐私的需要，该设置默认关闭，每次启动需要您手动开启"
+        android:textAlignment="center"
+        android:textColor="#80333333"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btn_debug_set"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="25.5dp"
+        android:layout_marginRight="25.5dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/gradient_function_button"
+        android:text="保存设置"
+        android:textColor="#ffffff"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="35dp"
+        android:text="注：部分手机平台权限设置权限，如无法保存音频，请给应用重新设置一下读取存储的权限"
+        android:textAlignment="viewStart"
+        android:textColor="#80333333"
+        android:textSize="13sp" />
+
+
+
+</LinearLayout>

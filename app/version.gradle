@@ -1,0 +1,15 @@
+ext{
+    def app_id = 'com.soundai.azero.azeromobile'
+    def server = 'PRO'
+    def version = 'azmobile_v0.2.0_alpha_20200622'
+    if(server == 'FAT'){
+        version = version + '_FAT'
+        //app_id = app_id + '.fat'
+    }
+    appinfo =
+            [
+                    appVersionName : version,
+                    appServerName : server,
+                    appId : app_id
+            ]
+}

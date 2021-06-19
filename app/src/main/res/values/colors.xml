@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryRipple">#d7d7d7</color>
+    <color name="colorPrimaryDark">#d7d7d7</color>
+    <color name="colorPrimaryDarkRipple">#ffffff</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorTitleH1">#ffffff</color>
+    <color name="colorButtonPrimary">#003e7e</color>
+    <color name="colorButtonAccent">#0091ea</color>
+    <color name="colorButtonPrimary2">#009688</color>
+    <color name="colorButtonError">#FF5722</color>
+    <color name="scrim">#99323232</color>
+    <color name="nav_bar">#99000000</color>
+    <color name="black">#000000</color>
+
+    <color name="runner_bg">#20232C</color>
+    <color name="runner_count_text">#3b77ef</color>
+
+    <color name="textPrimary">#FFFFFF</color>
+    <color name="textPrimaryDark">#000000</color>
+    <color name="textHint">#999999</color>
+    <color name="textInfo">#666666</color>
+    <color name="textWarning">#FB4242</color>
+    <color name="textTitle">#333333</color>
+    <color name="blueText">#3b77ef</color>
+    <color name="text">#3b77ef</color>
+    <color name="textWeatherPrimary">#1DBD88</color>
+
+    <!--天气-->
+    <color name="weather_label_bg">#33000000</color>
+    <color name="weather_feedback_bg">#33ffffff</color>
+    <color name="weather_dotted_line">#99ffffff</color>
+    <color name="weather_multi_divider_line">#ccffffff</color>
+    <color name="weather_air_excellent_start">#46E5B0</color>
+    <color name="weather_air_excellent_end">#1DBD88</color>
+    <color name="weather_air_good_start">#F3CA5C</color>
+    <color name="weather_air_good_end">#EFB212</color>
+    <color name="weather_air_light_start">#FFA664</color>
+    <color name="weather_air_light_end">#FB8E2D</color>
+    <color name="weather_air_medium_start">#FF895E</color>
+    <color name="weather_air_medium_end">#FA642D</color>
+    <color name="weather_air_server_start">#FF6150</color>
+    <color name="weather_air_server_end">#EC2C17</color>
+
+    <!--新闻-->
+    <color name="news_divider_line">#2365E6</color>
+    <color name="news_time">#666666</color>
+
+    <!--视频-->
+    <color name="video_progress_bg">#4DFFFFFF</color>
+    <color name="video_progress">#F89242</color>
+
+    <color name="cutOffRule">#EDEDED</color>
+
+    <color name="default_ev_border_color">#999999</color>
+    <color name="default_ev_password_color">#000000</color>
+
+    <color name="encyclopedia_title_color">#333333</color>
+    <color name="encyclopedia_main_title_color">#FFFEFE</color>
+    <color name="dialog_background_color">#CC000000</color>
+
+    <color name="asr_content_title_color">#E0E0E0</color>
+    <color name="asr_content_wave_view_color">#4985FF</color>
+    <color name="network_card_background">#FFFFFF</color>
+    <color name="network_card_text_color">#333333</color>
+    <color name="network_snack_bar_color">#99000000</color>
+    <color name="network_snack_bar_text_color">#FB4242</color>
+    <color name="textMoney">#F84836</color>
+
+    <color name="color_text3">#333</color>
+    <color name="color_transparent">#00000000</color>
+
+    <color name="wheel_text_color">#727272</color>
+    <color name="wheel_selected_text_color">#1db0b8</color>
+    <color name="wheel_highlight_color">#00000000</color>
+    <color name="wheel_divider_color">#80808080</color>
+</resources>

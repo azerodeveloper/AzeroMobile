@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="315dp"
+    android:layout_height="110dp">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xw_bg_img_play"
+        android:gravity="center"
+        android:text="播放中"
+        android:textColor="@color/textPrimary"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_song"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:maxLines="1"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="斯德哥尔摩情人" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/textInfo"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_song"
+        app:layout_constraintTop_toBottomOf="@+id/tv_song"
+        tools:text="陈奕迅-The Key" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/xw_icon_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sb_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:max="1000"
+        android:maxHeight="4.0dp"
+        android:minHeight="4.0dp"
+        android:progressDrawable="@drawable/seekbar_bg"
+        android:splitTrack="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:thumb="@drawable/custom_thumb"
+        app:layout_constraintTop_toBottomOf="@+id/tv_author"
+        tools:progress="400" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tv_timeline_duration"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/textHint"
+    android:textSize="10sp"
+    android:layout_marginTop="5dp"
+    app:layout_constraintStart_toStartOf="@+id/tv_author"
+    app:layout_constraintTop_toBottomOf="@+id/sb_progress"
+    tools:text="00:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_timeline_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textHint"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/sb_progress"
+        tools:text="01:15" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

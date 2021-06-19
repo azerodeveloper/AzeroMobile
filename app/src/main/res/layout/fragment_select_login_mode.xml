@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_bottom_content"
+    android:paddingStart="@dimen/padding_content_horizontal"
+    android:paddingTop="@dimen/padding_content_vertical"
+    android:paddingEnd="@dimen/padding_content_horizontal">
+
+    <TextView
+        android:id="@+id/tv_title_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_login_mode"
+        android:textColor="@color/textPrimaryDark"
+        android:textSize="@dimen/content_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_act_and_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_action_button"
+        android:text="@string/account_and_password"
+        android:textColor="@color/textPrimary"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_phone" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_facial_recognition"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/gradient_orange"
+        android:text="@string/facial_recognition"
+        android:textColor="@color/textPrimary"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_act_and_pwd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

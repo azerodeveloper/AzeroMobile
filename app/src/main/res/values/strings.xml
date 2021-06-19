@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">AzeroMobile</string>
+    <string name="empty_recyclerview_remind_content">页面加载中…</string>
+    <string name="lorem_Ipsum">型戰金原同，不大有報平各馬北感，叫清錯怎大意一留請，說得民西連著好園，裡魚天事，裡如知因死一別一起家重變不大行其我；期管業長工算著備即人？工作義了友。 的明也得全。 落關朋已道是詩經更：外媽可球也是灣它來有言，細角著決流試一球巴一都獲建實光用爸是到電言又的成班看，他跑及以，個結那不始三外自、覺不金只老都出軍吃白的通多情一於上賣現最術家過；院半的財重走西時山北在葉味想生命就著及，著放人回差品緊？得遊本員西變一名黨光得因然黃不屋也停國朋母，吃那過做又來一前而獎不而配住首機，我立然的因統音該長公！前得重統列正舉學論會的不人題達見臺的視情縣了不你區！建提性去女有馬了氣們來集北示中但，乎作民白！很本而八。 能運施地養，語歷團法。 體能球較，我人故家一想一；司愛點們中果自，廣統單長、部人裡，書廣展比長會格阿們車生事加造風自能上得國錯：讀天球活天母別大根聞計強會重了動產然以能待統示不生感理沒省的現情打晚定整我他技克叫現原山，是用中。可一遠復其那不得行器福治了據海德；別電增四。長做是大家平表感實才提苦，該是狀異當直得，現地國種工小表背生物在一最與一一只我！食開也學方影絕，不個同安書查易明談和發方此力照了知歷去死她男找個面和照美加告是水界我件師記活是過麼答來什行。相英就克行出。臺花了政提斷特早但邊語演不步完市。出問的；找一那政，果功一。</string>
+
+    <!--新闻-->
+    <string name="news_details">DETAILS</string>
+
+    <!--天气-->
+    <string name="weather_feedback">feedback</string>
+    <string name="weather_temperature_range">Temperature range</string>
+    <string name="weather_humidity">humidity</string>
+    <string name="weather_wind">wind</string>
+    <string name="weather_today">today</string>
+    <string name="weather_tomorrow">tomorrow</string>
+    <string name="weather_air_excellent">excellent</string>
+    <string name="weather_air_good">good</string>
+    <string name="weather_air_light">light</string>
+    <string name="weather_air_medium">medium</string>
+    <string name="weather_air_server">server</string>
+    <string name="weather_air_empty">empty</string>
+    <string name="weather_type_sunny">sunny</string>
+    <string name="weather_type_cloudy">cloudy</string>
+    <string name="weather_type_overcast">overcast</string>
+    <string name="weather_type_rain">rain</string>
+    <string name="weather_type_snow">snow</string>
+    <string name="weather_type_sand">sand</string>
+    <string name="weather_type_foggy">foggy</string>
+    <string name="weather_type_windy">windy</string>
+    <string name="weather_type_smog">smog</string>
+    <string name="weather_type_hail">hail</string>
+    <string name="weather_real_time">real time</string>
+    <string name="weather_pollution">pollution</string>
+
+    <string name="video_default_duration" translatable="false">00:00</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Input_verification_code">输入验证码</string>
+    <string name="resend_verification_code">重发验证码</string>
+    <string name="verification_code_wrong_input">验证码错误请重新输入</string>
+    <string name="select_login_mode">选择登陆方式</string>
+    <string name="account_and_password">账号密码</string>
+    <string name="pwd_login">密码登录</string>
+    <string name="enter_account">请输入手机号</string>
+    <string name="enter_pwd">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="forget_pwd">忘记密码</string>
+    <string name="act_or_pwd_error">账号或密码错误请重新输入</string>
+    <string name="next_step">下一步</string>
+    <string name="facial_recognition">面部识别</string>
+    <string name="personal_information_verification">个人信息验证</string>
+    <string name="question_verification">问题验证</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="auto_login_hint">未注册手机验证后自动登录</string>
+    <string name="please_enter_phone_num">请输入手机号</string>
+    <string name="phone_num_login">手机号登录</string>
+    <string name="other_login_mode">其他登录方式</string>
+    <string name="question_1">问题 1</string>
+    <string name="answer_1">答案</string>
+    <string name="reset_pwd">重置密码</string>
+    <string name="pwd_hint">该密码长度为6-20位，大写字母、小写字母、数字和标点符号至少包含两钟组合</string>
+    <string name="user_agreement">用户协议 / 隐私政策页</string>
+    <string name="user_agreement_content">感谢您选择中国移动的和彩云服务！使用中国和彩云（以下简称“和彩云”）前，请您仔细阅读《和彩云用户使用协议》。本协议是您在使用“和彩云”服务时与中国移动通信集团有限公司（以下简称“中国移动”）所订立的协议。如您不同意本协议条款或和彩云对其进行的修改，您可以主动取消和彩云提供的服务；您一旦使用和彩云提供的服务，即视为您已了解并完全同意本使用协议中服务条款各项内容，包括和彩云对服务条款所做的任何修改，并成为中国和彩云的用户（以下简称“用户”）。 一、使用须知 1、中国和彩云是一个向广大用户提供上传空间和技术的信息存储空间服务平台，通过和彩云服务技术为用户提供个人数据存储、同步和分享等在线服务。 2、和彩云服务本身不直接上传、提供内容，对用户存储的内容不做任何编辑和修改。任何经由和彩云提供的服务上传、发布、传送、存储的文档、图片、音乐、视频、应用程序、或其它资料（以下简称“内容”），无论系公开还是私下传送，均由上传者自行承担责任。 3、和彩云服务仅提供相关的网络服务，使用和彩云服务所需的设备（如PC、手机等）及费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均由用户自行负担。</string>
+    <string name="agree_and_authorize">同意并授权</string>
+    <string name="disagree">不同意</string>
+    <string name="guide_welcome_title">Hi,我是你的语音助理</string>
+    <string name="guide_welcome_content">当你在看开车、跑步、佩戴蓝牙耳机等场景时，\n 可随时说“小易小易”来唤醒我，\n 我可以快速为\n 你找寻到你想要的内容，\n 下面让我来带领你体验相关的功能吧！</string>
+    <string name="default_hint">No Lyrics</string>
+
+    <string name="encyclopedia_title">百科介绍</string>
+    <string name="dialog_box_help">帮助</string>
+    <string name="dialog_box_title">小易正在聆听中</string>
+    <string name="playing_hint"><![CDATA[当前正在播放[有声&视频]]]></string>
+
+    <string name="network_mobile_data_alert">当前为非WI-FI环境，注意流量哦</string>
+    <string name="network_weak">您当前的网络不太顺畅哦</string>
+    <string name="network_unavailable">网络连接不可用，请检查您的网络设置  ></string>
+    <string name="network_service_unconnected">服务器已断开，请稍后再试</string>
+    <string name="network_unconnected">网络连接不可用</string>
+    <string name="help" translatable="false">帮助</string>
+    <string name="question_win_hint" translatable="false">恭喜您闯关成功</string>
+
+    <string name="protocols_prompt" translatable="false">登陆即代表同意用户协议和隐私政策</string>
+
+    <string-array name="gender_array">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+</resources>

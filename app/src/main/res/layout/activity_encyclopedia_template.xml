@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.template.EncyclopediaTemplateActivity">
+
+    <com.soundai.azero.azeromobile.ui.widget.MockStatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/encyclopedia_layout_guideline_vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/encyclopedia_layout_guideline_vertical2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/encyclopedia_layout_guideline_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/encyclopedia_layout_guideline_horizontal2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.045" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/encyclopedia_layout_guideline_horizontal3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.015" />
+
+        <TextView
+            android:id="@+id/encyclopedia_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/encyclopedia_title"
+            android:textColor="@color/encyclopedia_title_color"
+            android:textSize="@dimen/encyclopedia_title_text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/encyclopedia_layout_guideline_horizontal2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/encyclopedia_layout_guideline_horizontal3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/encyclopedia_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/gradient_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/encyclopedia_layout_guideline_horizontal">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_vertical"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_vertical2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_vertical3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.39" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.09" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_horizontal2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_horizontal3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.41" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_horizontal4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.63" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_horizontal5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encyclopedia_guideline_horizontal6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <TextView
+                android:id="@+id/encyclopedia_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/encyclopedia_main_title_color"
+                android:textSize="@dimen/encyclopedia_main_title_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/encyclopedia_guideline_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/encyclopedia_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/encyclopedia_guideline_horizontal2"
+                app:layout_constraintEnd_toStartOf="@id/encyclopedia_guideline_vertical2"
+                app:layout_constraintStart_toEndOf="@id/encyclopedia_guideline_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/encyclopedia_guideline_horizontal" />
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@drawable/shape_scroll"
+                app:layout_constraintBottom_toTopOf="@+id/encyclopedia_guideline_horizontal4"
+                app:layout_constraintEnd_toStartOf="@id/encyclopedia_guideline_vertical2"
+                app:layout_constraintStart_toEndOf="@+id/encyclopedia_guideline_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/encyclopedia_guideline_horizontal3">
+
+                <com.soundai.azero.azeromobile.ui.widget.HighlightTextView
+                    android:id="@+id/tv_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="sans-serif-light"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp" />
+            </ScrollView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/encyclopedia_guideline_horizontal6"
+                app:layout_constraintEnd_toStartOf="@id/encyclopedia_guideline_vertical3"
+                app:layout_constraintStart_toEndOf="@id/encyclopedia_guideline_vertical"
+                app:layout_constraintTop_toBottomOf="@id/encyclopedia_guideline_horizontal5"
+                app:srcCompat="@drawable/tq_img_bear" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

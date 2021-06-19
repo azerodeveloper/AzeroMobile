@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_bottom_content_grey"
+    android:paddingStart="@dimen/padding_content_horizontal"
+    android:paddingTop="@dimen/padding_content_vertical"
+    android:paddingEnd="@dimen/padding_content_horizontal">
+
+    <TextView
+        android:id="@+id/tv_title_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_verification"
+        android:textColor="@color/textPrimaryDark"
+        android:textSize="@dimen/content_title_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/question_layout_height"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/corner_white_4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_phone"
+        tools:layout_editor_absoluteX="32dp">
+
+        <TextView
+            android:id="@+id/appCompatButton3"
+            android:layout_width="@dimen/question_button_width"
+            android:layout_height="@dimen/question_button_height"
+            android:layout_marginStart="@dimen/question_margin_start"
+            android:layout_marginTop="@dimen/question_margin_top"
+            android:background="@drawable/corner_gradient_blue"
+            android:gravity="center"
+            android:text="@string/question_1"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/question_button_textsize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="请问你爸爸的名字是什么呢？"
+            android:textSize="@dimen/question_title_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatButton3"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButton3"
+            app:layout_constraintTop_toTopOf="@+id/appCompatButton3" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cutOffRule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton3" />
+
+        <TextView
+            android:id="@+id/appCompatButton4"
+            android:layout_width="@dimen/question_button_width"
+            android:layout_height="@dimen/question_button_height"
+            android:layout_marginStart="@dimen/question_margin_start"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selector_action_button"
+            android:gravity="center"
+            android:text="@string/answer_1"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/question_button_textsize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="请问你爸爸的名字？"
+            android:textSize="@dimen/answer_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatButton4"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButton4"
+            app:layout_constraintTop_toTopOf="@+id/appCompatButton4" />
+
+        <ImageButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="17dp"
+            android:src="@drawable/dl_btn_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/question_layout_height"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/corner_white_4"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        tools:layout_editor_absoluteX="32dp">
+
+        <TextView
+            android:id="@+id/appCompatButton5"
+            android:layout_width="@dimen/question_button_width"
+            android:layout_height="@dimen/question_button_height"
+            android:layout_marginStart="@dimen/question_margin_start"
+            android:layout_marginTop="@dimen/question_margin_top"
+            android:background="@drawable/corner_gradient_blue"
+            android:gravity="center"
+            android:text="@string/question_1"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/question_button_textsize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="请问你爸爸的名字是什么呢？"
+            android:textSize="@dimen/question_title_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatButton5"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButton5"
+            app:layout_constraintTop_toTopOf="@+id/appCompatButton5" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cutOffRule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton5" />
+
+        <TextView
+            android:id="@+id/appCompatButton6"
+            android:layout_width="@dimen/question_button_width"
+            android:layout_height="@dimen/question_button_height"
+            android:layout_marginStart="@dimen/question_margin_start"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selector_action_button"
+            android:gravity="center"
+            android:text="@string/answer_1"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/question_button_textsize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="请问你爸爸的名字？"
+            android:textSize="@dimen/answer_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatButton6"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButton6"
+            app:layout_constraintTop_toTopOf="@+id/appCompatButton6" />
+
+        <ImageButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="17dp"
+            android:src="@drawable/dl_btn_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/question_layout_height"
+        android:background="@drawable/corner_white_4"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+        <TextView
+            android:id="@+id/appCompatButton7"
+            android:layout_width="@dimen/question_button_width"
+            android:layout_height="@dimen/question_button_height"
+            android:layout_marginStart="@dimen/question_margin_start"
+            android:layout_marginTop="@dimen/question_margin_top"
+            android:background="@drawable/corner_gradient_blue"
+            android:gravity="center"
+            android:text="@string/question_1"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/question_button_textsize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="请问你爸爸的名字是什么呢？"
+            android:textSize="@dimen/question_title_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatButton7"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButton7"
+            app:layout_constraintTop_toTopOf="@+id/appCompatButton7" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cutOffRule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton7" />
+
+        <TextView
+            android:id="@+id/appCompatButtion8"
+            android:layout_width="@dimen/question_button_width"
+            android:layout_height="@dimen/question_button_height"
+            android:layout_marginStart="@dimen/question_margin_start"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selector_action_button"
+            android:gravity="center"
+            android:text="@string/answer_1"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/question_button_textsize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="请问你爸爸的名字？"
+            android:textSize="@dimen/answer_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatButtion8"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButtion8"
+            app:layout_constraintTop_toTopOf="@+id/appCompatButtion8" />
+
+        <ImageButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="17dp"
+            android:src="@drawable/dl_btn_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_action_button"
+        android:text="@string/next_step"
+        android:textColor="@color/textPrimary"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

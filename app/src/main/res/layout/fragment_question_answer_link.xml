@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_grid_content"
+    android:minHeight="415dp">
+
+    <TextView
+        android:id="@+id/tv_question_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:textColor="@color/textTitle"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="第一题" />
+
+    <TextView
+        android:id="@+id/tv_question_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15sp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:textColor="@color/textTitle"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_num"
+        tools:text="没有SEO方面的信息应该怎么办" />
+
+    <Button
+        android:id="@+id/btn_a"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/corner_btn_question"
+        android:textColor="@color/textInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_title"
+        tools:text="A 吃霸王餐" />
+
+    <Button
+        android:id="@+id/btn_b"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/corner_btn_question"
+        android:textColor="@color/textInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_a"
+        tools:text="A 吃霸王餐" />
+
+    <Button
+        android:id="@+id/btn_c"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/corner_btn_question"
+        android:textColor="@color/textInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_b"
+        tools:text="A 吃霸王餐" />
+
+    <Button
+        android:id="@+id/btn_d"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/corner_btn_question"
+        android:textColor="@color/textInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_c"
+        tools:text="A 吃霸王餐" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp_option_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="btn_a,btn_b,btn_c,btn_d" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

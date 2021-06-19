@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PasswordInputView">
+        <attr name="captchaBorderWidth" format="dimension"/>
+        <attr name="captchaBorderColor" format="color"/>
+        <attr name="captchaBorderRadius" format="dimension"/>
+        <attr name="captchaLength" format="integer"/>
+        <attr name="captchaWidth" format="dimension"/>
+        <attr name="captchaColor" format="color"/>
+        <attr name="captchaRadius" format="dimension"/>
+        <attr name="captchaViewSize" format="dimension"/>
+        <attr name="captchaTextSize" format="dimension"/>
+        <attr name="captchaViewPadding" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="LyricView">
+        <attr name="hint" format="string" />
+        <attr name="hintColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="highlightColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="maxLength" format="dimension" />
+        <attr name="fadeInFadeOut" format="boolean" />
+        <attr name="lineSpace" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="NiceImageView">
+        <attr name="is_circle" format="boolean" />
+        <attr name="is_cover_src" format="boolean" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="corner_top_left_radius" format="dimension" />
+        <attr name="corner_top_right_radius" format="dimension" />
+        <attr name="corner_bottom_left_radius" format="dimension" />
+        <attr name="corner_bottom_right_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="inner_border_width" format="dimension" />
+        <attr name="inner_border_color" format="color" />
+        <attr name="mask_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SphereView">
+        <attr name="min_scale" format="float" />
+        <attr name="max_scale" format="float" />
+        <attr name="min_alpha" format="float" />
+        <attr name="loop_speed" format="float" />
+        <attr name="max_elevation" format="dimension" />
+        <attr name="loop_angle" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="WheelView">
+        <attr name="wheelCyclic" format="boolean"/>
+        <attr name="wheelEntries" format="reference"/>
+        <attr name="wheelItemCount" format="integer"/>
+        <attr name="wheelItemWidth" format="dimension"/>
+        <attr name="wheelItemHeight" format="dimension"/>
+        <attr name="wheelTextSize" format="dimension"/>
+        <attr name="wheelTextColor" format="color"/>
+        <attr name="wheelSelectedTextColor" format="color"/>
+        <attr name="wheelDividerColor" format="color"/>
+        <attr name="wheelHighlightColor" format="color"/>
+    </declare-styleable>
+</resources>

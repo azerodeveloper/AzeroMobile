@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_question">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="答题环节"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/dt_icon_share"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/tv_participants_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="15dp"
+        android:text="参赛人数1234"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/bottom_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_witness"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/half_corner_red"
+        android:gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="10dp"
+        android:text="观战中"
+        android:textColor="@color/textPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/half_corner_orange"
+        android:gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="8dp"
+        android:text="帮助"
+        android:textColor="@color/textPrimary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_remain_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="当前人数456"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/bottom_text_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_participants_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_participants_number" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_option_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="187dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="147dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_count_down"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/dt_bj_countdown" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="15"
+            android:textColor="#5F6CEB"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/dt_img_logo"
+        app:layout_constraintStart_toStartOf="@+id/fl_option_container"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+    <ImageView
+        android:id="@+id/iv_img_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dt_img_hear"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

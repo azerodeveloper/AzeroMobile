@@ -1,0 +1,168 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply from: 'version.gradle'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId appinfo.appId
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName appinfo.appVersionName
+        manifestPlaceholders = [
+                "versionName": "${versionName}",
+                appId: applicationId
+        ]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    signingConfigs {
+        debug{
+            keyAlias 'talaile'
+            keyPassword 'android'
+            storeFile file("../keystore/talaile.keystore")
+            storePassword 'android'
+        }
+        release{
+
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    dynamicFeatures = []
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.arasthel:spannedgridlayoutmanager:3.0.2'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt 'com.github.bumptech.glide:compiler:4.10.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation(name: 'denoise-release', ext: 'aar')
+    implementation(name: 'azero-release', ext: 'aar')
+    implementation(name: 'appintro-release', ext: 'aar')
+    implementation(name: 'android-vad-v1.0.0-release', ext: 'aar')
+
+    implementation 'com.alibaba:fastjson:1.2.14'
+    implementation 'log4j:log4j:1.2.17'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'cz.msebera.android:httpclient:4.3.6'
+    def exoplayerVersion = '2.10.5'
+    implementation "com.google.android.exoplayer:exoplayer-core:${exoplayerVersion}"
+    implementation "com.google.android.exoplayer:exoplayer-dash:${exoplayerVersion}"
+    implementation "com.google.android.exoplayer:exoplayer-smoothstreaming:${exoplayerVersion}"
+    implementation "com.google.android.exoplayer:exoplayer-hls:${exoplayerVersion}"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2'
+
+    implementation 'com.googlecode.soundlibs:jlayer:1.0.1.4'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.squareup.okio:okio:2.2.2'
+
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+
+    def lifecycle_version = "1.1.1"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+
+    implementation "com.android.support:palette-v7:28.0.0"
+
+    //permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'cn.dxjia:imagetextbutton:1.0.0'
+
+    //跑步功能
+    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.amap.api:map2d:latest.integration'
+
+//    implementation project(':obex')
+    implementation project(':lib-todaystepcounter')
+    implementation project(':lib-todayrunrecord')
+    implementation project(':lib-surrogate')
+    implementation project(':lib-phoneareacodelibray')
+//    implementation(name: 'obex_unitylib_1.0.8', ext: 'aar')
+
+    // add for room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    // room 配合 RxJava
+    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.2.0'
+
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+//    implementation 'com.github.AppIntro:AppIntro:5.1.0'
+
+    //微信sdk
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    implementation "com.squareup.retrofit2:converter-gson:2.7.1"
+
+    // 友盟统计SDK
+//    implementation "com.umeng.umsdk:analytics:8.1.3"
+
+    //基础组件库依赖(必须) Push 6.1.0版本必须升级新版本Common SDK
+    implementation 'com.umeng.umsdk:common:9.1.0'
+    implementation 'com.umeng.umsdk:utdid:1.5.2'
+    implementation  'com.umeng.umsdk:asms:1.1.3'
+    implementation 'com.umeng.umsdk:crash:0.0.4'
+
+    //友盟push相关依赖(必须)
+    implementation 'com.umeng.umsdk:push:6.1.0'
+
+    implementation 'com.umeng.umsdk:alicloud-httpdns:1.2.5'
+    implementation 'com.umeng.umsdk:alicloud-utils:1.1.5'
+    implementation 'com.umeng.umsdk:alicloud_beacon:1.0.1'
+
+    implementation 'com.umeng.umsdk:agoo-accs:3.3.8.8-open-fix2'
+    implementation 'com.umeng.umsdk:agoo_networksdk:3.5.5'
+    implementation 'com.umeng.umsdk:agoo_tlog:3.0.0.17'
+    implementation 'com.umeng.umsdk:agoo_tnet4android:3.1.14.9'
+
+}

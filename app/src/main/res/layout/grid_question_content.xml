@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="19dp"
+        android:background="@drawable/gradient_function_button"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/textPrimary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="21dp"
+        android:textColor="@color/textTitle"
+        android:textSize="14sp"
+        tools:text="语音实时直播答题节目，答对 12 题即可瓜
+分现金奖励；" />
+</LinearLayout>

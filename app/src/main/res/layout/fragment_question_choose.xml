@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_grid_content"
+    android:minHeight="256dp">
+
+    <TextView
+        android:id="@+id/tv_vote_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/page_margin"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="@dimen/page_margin"
+        android:gravity="center"
+        android:textColor="@color/textTitle"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="请闯关成功同学投票是否平分奖金" />
+
+    <Button
+        android:id="@+id/btn_a"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/gradient_function_button"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vote_title"
+        tools:text="1.平分" />
+
+    <Button
+        android:id="@+id/btn_b"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/corner_gradient_question_wrong"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_a"
+        tools:text="2.随机" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

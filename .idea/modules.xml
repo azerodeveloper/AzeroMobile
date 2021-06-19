@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AzeroMobile.iml" filepath="$PROJECT_DIR$/.idea/modules/AzeroMobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AzeroMobile.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AzeroMobile.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib-phoneareacodelibray/AzeroMobile.lib-phoneareacodelibray.iml" filepath="$PROJECT_DIR$/.idea/modules/lib-phoneareacodelibray/AzeroMobile.lib-phoneareacodelibray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib-Surrogate/AzeroMobile.lib-surrogate.iml" filepath="$PROJECT_DIR$/.idea/modules/lib-Surrogate/AzeroMobile.lib-surrogate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib-todayrunrecord/AzeroMobile.lib-todayrunrecord.iml" filepath="$PROJECT_DIR$/.idea/modules/lib-todayrunrecord/AzeroMobile.lib-todayrunrecord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib-todaystepcounter/AzeroMobile.lib-todaystepcounter.iml" filepath="$PROJECT_DIR$/.idea/modules/lib-todaystepcounter/AzeroMobile.lib-todaystepcounter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib-update/AzeroMobile.lib-update.iml" filepath="$PROJECT_DIR$/.idea/modules/lib-update/AzeroMobile.lib-update.iml" />
+    </modules>
+  </component>
+</project>
